@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <img class="randomImage" id="randomImage" alt="oops">
+    <script>
+        const images = [
+            "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJyb3VlanMyMTI0Mjc0czd3YXFsdGZlZHFiZ3Bic2FpMjZseDZ2NiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/RKA9WE5HGkLi8/giphy.gif",
+        ];
+
+        function getRandomImage() {
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        document.getElementById("randomImage").src = getRandomImage();
+    </script>
+</body>
+
+</html>
